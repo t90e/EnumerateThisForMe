@@ -8,6 +8,7 @@ def f(domain, fullscan, headers):
         nm.scan(hosts=domain, arguments='-p80,443 --script=http-headers')
     else:
         nm.scan(hosts=domain, arguments='-sV -sS -O')
+
     print(nm.csv())
 
 if __name__ == "__main__":
